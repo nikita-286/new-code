@@ -1,0 +1,74 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto; /* Adjust margin to move the container closer to the icon */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.section {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Additional styles for the header */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.donate-icon {
+    width: 120px; /* Adjust the size of the icon */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 1.5px; /* Add some space below the icon */
+}

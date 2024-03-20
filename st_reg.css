@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    position: relative; /* Add relative positioning */
+    height: 100vh; /* Set height to full viewport height */
+  }
+  
+  .background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('logo2.jpeg'); /* Replace '/images/REGISTER2.png' with the correct path to your image */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+  
+  h2 {
+    color: #ffffff;
+    left: 100px;
+    font-size: 50px;
+    nav-down: 1000px; /* Reset top margin */
+}
+
+
+  
+  form {
+    background-color: #e3d4d488;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    position: absolute; /* Set absolute positioning */
+    right: 20px; /* Set left position to 20px */
+    top: 50%; /* Position form vertically at 50% from top */
+    transform: translateY(-50%); /* Center align vertically */
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #e3d4d488;
+    border: 1px solid #e3d4d488;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  input[type="submit"] {
+    background-color: #522e05;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color:#522e05;
+  }
+  
+  .error-message {
+    background-color: #d1ccccad;
+    color: #fbf2f168;
+    border: 1px solid #d1ccccad;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    display: none;
+  }

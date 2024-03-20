@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('images/volunteer1.jpg');
+      background-size: cover;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #000000;
+    }
+
+    header button {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: #007bff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    header button:hover {
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+
+    .left-panel, .right-panel {
+      flex: 1;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      color: #000;
+    }
+
+    .left-panel {
+      margin-right: 10px;
+    }
+
+    .right-panel {
+      margin-left: 10px;
+    }
+
+    h2 {
+      margin-top: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Volunteer</h1>
+    <button id="certificate-btn">Certificate</button>
+  </header>
+  <div class="container">
+    <div class="left-panel">
+      <div class="content">
+        <div>
+          <h2>Work Done and To Be Done</h2>
+          <ul id="tasks">
+            <li>Task 1</li>
+            <li>Task 2</li>
+            <li>Task 3</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Achievements</h2>
+          <ul id="achievements">
+            <li>Achievement 1</li>
+            <li>Achievement 2</li>
+            <li>Achievement 3</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="right-panel">
+      <div id="volunteer-details">
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Age:</strong> 25</p>
+        <p><strong>Email:</strong> john@example.com</p>
+        <p><strong>Phone:</strong> 123-456-7890</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const certificateLink = 'images/k_certificate.png';
+
+      // Event listener for certificate button
+      const certificateBtn = document.getElementById("certificate-btn");
+      certificateBtn.addEventListener("click", () => {
+        const downloadLink = document.createElement('a');
+        downloadLink.href = certificateLink;
+        downloadLink.download = 'k_certificate.png'; // Corrected the filename to match the file type (PNG)
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+      });
+    });
+  </script>
+</body>
+</html>

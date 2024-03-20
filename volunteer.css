@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/volunteer1.jpg');
+    background-size: cover;
+  }
+  
+  header {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  header h1 {
+    margin: 0;
+    color: #000000;
+  }
+  
+  header button {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  header button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+  
+  .left-panel, .right-panel {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.8); /* Adjusted background color */
+    padding: 30px; /* Adjusted padding */
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #000; /* Adjusted text color */
+  }
+  
+  .left-panel {
+    margin-right: 10px;
+  }
+  
+  .right-panel {
+    margin-left: 10px;
+  }
+  
+  h2 {
+    margin-top: 20px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Page</title>
+    <link rel="stylesheet" href="donate.css">
+    <style>
+        /* Additional styles for the button container */
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        /* Styles for the Download Certificate button */
+        .download-certificate-btn {
+            display: none; /* Initially hidden */
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .download-certificate-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Styles for the file upload input */
+        #fileInput {
+            display: none; /* Hide the default file input */
+        }
+
+        .upload-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .upload-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Style for the upload icon */
+        .upload-icon {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="donate.gif" alt="Donate" class="donate-icon">
+    </div>
+    <div class="container">
+        <div class="section bank-details">
+            <h2>Donor Bank Details</h2>
+            <p>Bank Name: <input type="text" id="bankName" name="bankName" required></p>
+            <p>Account Number: <input type="text" id="accountNumber" name="accountNumber" required></p>
+            <!-- Additional bank details -->
+        </div>
+        <div class="section amount-receipt">
+            <h2>Amount Donated</h2>
+            
+            <!-- Donation form -->
+            <form id="donationForm">
+                <label for="donationAmount">Enter Donation Amount:</label>
+                <input type="number" id="donationAmount" name="donationAmount" required>
+                <button type="submit" onclick="donate()">Donate</button>
+            </form>
+        </div>
+        <div class="section ngo-bank-details">
+            <h2>NGO Bank Details</h2>
+            <p>Bank Name: <input type="text" id="ngoBankName" name="ngoBankName" required></p>
+            <p>Account Number: <input type="text" id="ngoAccountNumber" name="ngoAccountNumber" required></p>
+            <!-- Additional NGO bank details -->
+        </div>
+        <div class="section qr-code">
+            <h2>Scan QR Code</h2>
+            <img src="qr.jpeg" alt="QR Code">
+        </div>
+    </div>
+    <div class="button-container">
+        <input type="file" id="fileInput" accept=".jpg, .jpeg, .png, .pdf" onchange="uploadReceipt(event)">
+        <label for="fileInput" class="upload-btn">
+            <span class="upload-icon">▶️</span>Upload Receipt
+        </label>
+        <button class="download-certificate-btn" onclick="downloadCertificate()">Download Certificate</button>
+    </div>
+    <script src="donate.js"></script>
+    <script>
+        function donate() {
+            // Here you can add logic to handle the donation process, e.g., sending data to a server, updating a database, etc.
+            alert('Processing donation...');
+        }
+
+        function downloadCertificate() {
+            // Example: Downloading an image
+            const imageUrl = 'certificate.png'; // Update with your image URL
+            const fileName = 'certificate.png'; // Change the filename and extension as needed
+
+            fetch(imageUrl)
+                .then(response => response.blob())
+                .then(blob => {
+                    // Create a downloadable link for the image blob
+                    const link = document.createElement('a');
+                    link.href = URL.createObjectURL(blob);
+                    link.download = fileName;
+                    link.click();
+                });
+
+            alert('Downloading certificate...');
+            document.querySelector('.download-certificate-btn').style.display = 'none'; // Hide the button after downloading
+        }
+
+        function uploadReceipt(event) {
+            const file = event.target.files[0];
+            if (file) {
+                // You can add logic here to handle the uploaded file, e.g., send it to the server for processing
+                alert('File uploaded: ' + file.name);
+                document.querySelector('.download-certificate-btn').style.display = 'block'; // Show the button after uploading
+            }
+        }
+    </script>
+</body>
+</html>

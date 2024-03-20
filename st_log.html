@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="st_log.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+  <div class="container">
+    <h2>LOGIN</h2>
+    <form id="loginForm" action="#" method="post">
+      <div class="form-group">
+        <label for="username">Mobile Number or Email ID:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit" id="loginButton">Login</button>
+    </form>
+    <p>Don't have an account? <a href="reg_option.html">Register here</a></p>
+  </div>
+
+  <script>
+    // Adding click event listener to the submit button
+    document.getElementById("loginButton").addEventListener("click", function(event) {
+      // Preventing the default form submission
+      event.preventDefault();
+      // Navigating to the registration page
+      window.location.href = "student.html";
+    });
+  </script>
+</body>
+</html>

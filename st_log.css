@@ -1,0 +1,136 @@
+/* General styles */
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('img2.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-sizing: border-box; /* Include padding and border in total width and height */
+    min-height: 100vh; /* Ensure body and html take up full viewport height */
+}
+
+
+.container {
+    max-width: 300px; /* Reduced max-width to make the container less wide */
+    margin: 100px auto; /* Increased margin for centering vertically */
+    padding: 50px 15px; /* Increased padding for more height */
+    background-color: rgba(255, 255, 255, 0.8); /* Example background color with transparency */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center align text and elements */
+}
+
+
+h1, h2 {
+    text-align: center;
+    margin-top: -10px; /* Move the login text up slightly */
+}
+
+
+.details-box {
+    display: none; /* Hide the details box by default */
+    border-left: 5px solid #007bff; /* Highlight color for the box */
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+
+.personal-details p {
+    margin: 5px 0;
+}
+
+
+#toggleDetailsButton {
+    margin: 30px auto 20px; /* Center the button horizontally and add more margin */
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px; /* Increased padding for a bigger button */
+    border: none;
+    border-radius: 8px; /* Increased border radius for a rounded button */
+    cursor: pointer;
+    font-size: 18px; /* Increased font size for the button text */
+}
+
+
+#toggleDetailsButton:hover {
+    background-color: #0056b3;
+}
+
+
+/* Select Exam Dropdown Styles */
+.select-exam {
+    margin-top: 20px;
+}
+
+
+#examSelect {
+    padding: 8px;
+    font-size: 14px; /* Reduced font size for smaller input boxes */
+}
+
+
+/* Progress Report Styles */
+.progress-report {
+    margin-top: 20px;
+}
+
+
+.subject-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.subject-list li {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+/* Styles for the progress report table */
+.subject-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.subject-table th,
+.subject-table td {
+    padding: 8px; /* Reduced padding for smaller input boxes */
+    border: 1px solid #ccc;
+}
+
+
+.subject-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+
+/* Styles for input boxes */
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Set width to 100% for full container width */
+    padding: 8px; /* Reduced padding for smaller input boxes */
+    font-size: 14px; /* Reduced font size for smaller input boxes */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px; /* Adjust margin between input boxes */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+
+/* Styles for create new account link */
+.create-account-link {
+    margin-top: 20px; /* Move the link below the login button */
+    font-size: 14px; /* Adjust font size */
+    color: #007bff;
+    text-decoration: none;
+}
+
+
+.create-account-link:hover {
+    text-decoration: underline;
+}
